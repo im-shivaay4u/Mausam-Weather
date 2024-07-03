@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mausam</title>
+    <link rel="icon" href="shiva_favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Weather App</h1>
+      <div class="tab-contaienr">
+        <p class="tab" data-userweather>Your Weather</p>
+        <p class="tab" data-searchweather>Search Weather</p>
+      </div>
+      <div class="Weather-container">
+        <!-- grant location image -->
+        <div class="sub-container  grant-location-container">
+          <img src="location.png" width="80" height="80" loading="lazy" />
+          <p>grant Location Access</p>
+          <p>Allow Access to get Weather</p>
+          <button class="btn" data-grantAccess>Grant Access</button>
+        </div>
+        <form class="form-container" data-searchForm>
+          <input placeholder="Seach for city..." data-searchInput />
+          <button class="btn">
+            <img src="search.png" width="20" height="20" loading="lazy" />
+          </button>
+        </form>
+        <!-- loading screen  container -->
+        <div class="sub-container  loading-container">
+          <img src="loading.gif" width="150" height="150" />
+          <p>loading</p>
+        </div>
+        <div class="sub-container  user-info-container">
+            <!-- city-name and city flag and weather description -->
+            <div class="name">
+                <p data-cityName></p>
+                <img data-countryIcon>
+            </div>
+            <!-- weather-decription -->
+            <p data-weatherDesc></p>
+            <!-- weatehr-icon -->
+            <img data-weatherIcon>
+            <!-- temperature -->
+            <p data-temp></p>
+
+
+            <!-- 3 cards parameters -->
+            <div class="parameter-container">
+                <div class="parameter">
+                    <img src="wind.png" alt="">
+                    <p>windSpeed</p>
+                    <p data-windspeed></p>
+                </div>
+                <!-- card-2 -->
+                <div class="parameter">
+                    <img src="humidity.png" alt="">
+                    <p>humidity</p>
+                    <p data-humidity></p>
+                </div>
+                <!-- card-3 -->
+                <div class="parameter">
+                    <img src="cloud.png" alt="">
+                    <p>clouds</p>
+                    <p data-clouds></p>
+                </div>
+            </div>
+          </div>
+          <div class="error">
+            <img src="not-found.png" width="250" height="250">
+          </div>
+          <footer>
+              <p>made with
+                  <span class="dil"><i class="fa-solid fa-heart"></i></span>  by <span>shivaAy</span></p>
+          </footer>
+      </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
